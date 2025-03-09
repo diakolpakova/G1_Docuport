@@ -1,6 +1,8 @@
 package io.docuport_g1.step_definitions;
 
-import io.cucumber.java.*;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.docuport_g1.utilities.BrowserUtils;
 import io.docuport_g1.utilities.Driver;
 import org.apache.logging.log4j.LogManager;
