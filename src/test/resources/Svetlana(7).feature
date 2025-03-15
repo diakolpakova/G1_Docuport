@@ -1,4 +1,4 @@
-Feature:
+Feature: Verify user tables names
 Background:
 Given Establish the database connection
 @db
