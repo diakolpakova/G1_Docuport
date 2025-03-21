@@ -31,6 +31,9 @@ public class LeftNavigatePage {
     @FindBy(xpath = "//a[contains(text(),'Terms')]")
     public WebElement termsAndConditionsButton;
 
+    @FindBy(xpath = "//a[@href=\"/leads\"]")
+    public WebElement leadsButton;
+
     public void clickButton(String button){
         switch (button.toLowerCase().trim()){
             case "received doc":
@@ -54,6 +57,9 @@ public class LeftNavigatePage {
 
             case "my uploads":
                 BrowserUtils.waitForClickable(myUploads, 10).click();
+                break;
+            case "leads":
+                BrowserUtils.waitForClickable(leadsButton, 10).click();
                 break;
 
             default: throw new IllegalArgumentException("Not such a button: " + button);
