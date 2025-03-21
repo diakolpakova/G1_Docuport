@@ -9,10 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class LeadsPage {
     public LeadsPage() {
@@ -25,6 +22,25 @@ public class LeadsPage {
     public List<WebElement> rows;
 
 
+    public int getResultCount() {
+        return Driver.getDriver().findElements(By.xpath("//tbody/tr")).size();
+    }
+
+        public List<Map<String, String>> getAllLeadsInformation(String fullName, String emailAddress, String phoneNumber) {
+            List<Map<String, String>> expectedList = new ArrayList<>();
+            for (int i = 1; i <= getResultCount(); i++) {
+                Map<String, String> expectedMap = new LinkedHashMap<>();
+                expectedMap.put(fullName, Driver.getDriver().findElement(By.xpath("(//tbody/tr)[" + i + "]//td[2]")).getText());
+                expectedMap.put(emailAddress, Driver.getDriver().findElement(By.xpath("(//tbody/tr)[" + i + "]//td[3]")).getText());
+                expectedMap.put(phoneNumber, Driver.getDriver().findElement(By.xpath("(//tbody/tr)[" + i + "]//td[4]")).getText());
+                expectedList.add(expectedMap);
+            }
+
+            return expectedList;
+        }
+    }
+
+/*
     public List<Map<String, String>> returnDataFromUI(String fullName, String emailAddress, String phoneNumber) {
         List<Map<String, String>> leadsListUI = new ArrayList<>();
 
@@ -37,7 +53,7 @@ public class LeadsPage {
             String phone = cells.get(3).getText().trim();
 
             // Store values in a map
-            Map<String, String> leadData = new HashMap<>();
+            Map<String, String> leadData = new LinkedHashMap<>();
             leadData.put(fullName, name);
             leadData.put(emailAddress, email);
             leadData.put(phoneNumber, phone);
@@ -49,7 +65,7 @@ public class LeadsPage {
         for (Map<String, String> lead : leadsListUI) {
             System.out.println("Lead Info: " + lead);
         }
-
+        System.out.println("UI Leads Data: " + leadsListUI);
         return leadsListUI;
     }
 
@@ -61,10 +77,10 @@ public class LeadsPage {
         rs = DB_Utility.runQuery("SELECT owner_first_name, contact_email_address, contact_phone_number FROM document.leads");
 
         while (rs.next()) {
-            Map<String, String> leadData = new HashMap<>();
-            leadData.put("Full Name", rs.getString("owner_first_name"));
+            Map<String, String> leadData = new LinkedHashMap<>();
             leadData.put("Email Address", rs.getString("contact_email_address"));
             leadData.put("Phone Number", rs.getString("contact_phone_number"));
+            leadData.put("Full Name", rs.getString("owner_first_name"));
 
             leadsListDB.add(leadData);
         }
@@ -84,4 +100,5 @@ public class LeadsPage {
             }
         }
     }
-}
+
+ */
