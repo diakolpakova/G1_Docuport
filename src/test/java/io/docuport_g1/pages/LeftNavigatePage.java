@@ -69,8 +69,7 @@ public class LeftNavigatePage {
                 BrowserUtils.waitForClickable(leadsButton, 10).click();
                 break;
 
-            default:
-                throw new IllegalArgumentException("Not such a button: " + button);
+            default: throw new IllegalArgumentException("Not such a button: " + button);
         }
     }
 }

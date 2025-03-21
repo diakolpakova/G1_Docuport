@@ -93,18 +93,6 @@ public class LoginStepDefs {
 
     }
 
-    @When("user enters username and password for advisor")
-    public void user_enters_username_and_password_for_advisor() {
-        BrowserUtils.waitForClickable(loginPage.loginButton, DocuportConstants.EXTRA_LARGE);
-        Assert.assertTrue("Login button is NOT displayed", loginPage.loginButton.isDisplayed());
-        loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_ADVISOR);
-        BrowserUtils.takeScreenshot();
-        LOG.info("user enters advisor username");
-        loginPage.passwordInput.sendKeys(DocuportConstants.PASSWORD);
-        BrowserUtils.takeScreenshot();
-        LOG.info("user enters password for advisor");
-    }
-
     @Then("user should be able to see the home for advisor")
     public void user_should_be_able_to_see_the_home_for_advisor() {
         Assert.assertTrue(BrowserUtils.waitForVisibility(loginPage.homeIcon,10).isDisplayed());
