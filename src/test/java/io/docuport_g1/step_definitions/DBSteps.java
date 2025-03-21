@@ -12,6 +12,7 @@ import java.util.Set;
 public class DBSteps {
 
     List<String> actualUserId;
+    List<String> actualColumnNames;
 
     @Given("Establish the database connection")
     public void establish_the_database_connection() {
@@ -38,5 +39,16 @@ public class DBSteps {
         Set<String> removingDup = new LinkedHashSet<>(actualUserId);
         Assert.assertEquals(actualUserId.size(), removingDup.size());
 
+    }
+
+    @When("Execute query to get all columns")
+    public void execute_query_to_get_all_columns() {
+        String sql = "select * from document.users";
+        DB_Utility.runQuery(sql);
+        actualColumnNames = DB_Utility.getAllColumnNamesAsList();
+    }
+    @Then("verify the below columns are listed in result")
+    public void verify_the_below_columns_are_listed_in_result(List<String> expectedColumnNames) {
+        Assert.assertEquals("Actual result does not match with expected",expectedColumnNames,actualColumnNames);
     }
 }
