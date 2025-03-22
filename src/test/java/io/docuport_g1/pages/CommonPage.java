@@ -24,7 +24,8 @@ public class CommonPage {
 
 
         }
-    }}
+    }
+}
 
 
 
