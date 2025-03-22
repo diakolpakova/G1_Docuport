@@ -1,0 +1,7 @@
+17.03.2025 19:05:48 INFO  LoginStepDefs:31 - user is on docuport login page
+17.03.2025 19:05:48 INFO  LoginStepDefs:106 - user enters username
+17.03.2025 19:05:48 INFO  LoginStepDefs:111 - user enters password
+17.03.2025 19:05:48 INFO  LoginStepDefs:48 - user clicks login button
+17.03.2025 19:05:48 INFO  LoginStepDefs:118 - Home page is successfully displayed
+17.03.2025 19:05:49 INFO  LoginStepDefs:63 - Log out page is successfully displayed
+17.03.2025 19:05:49 INFO  Hook:34 - .......................END AUTOMATION........................Group_1
