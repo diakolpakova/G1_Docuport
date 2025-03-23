@@ -1,6 +1,6 @@
 Feature: Click buttons advisor
 
-  @gulnar
+  @smoke
   Scenario: Click buttons on different pages as a client
     Given user is on Docuport login page
     When user enters username for advisor

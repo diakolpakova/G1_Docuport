@@ -1,8 +1,4 @@
-22.03.2025 09:48:08 INFO  LoginStepDefs:31 - user is on docuport login page
-22.03.2025 09:48:08 INFO  LoginStepDefs:87 - user enters username
-22.03.2025 09:48:08 INFO  LoginStepDefs:92 - user enters password
-22.03.2025 09:48:08 INFO  LoginStepDefs:48 - user clicks login button
-22.03.2025 09:48:08 INFO  LoginStepDefs:54 - Home page is successfully displayed
-22.03.2025 09:48:08 INFO  CommonPage:16 - Received Doc - was successfully clicked
-22.03.2025 09:48:09 INFO  CommonPage:20 - Search - was successfully clicked
-22.03.2025 09:48:09 INFO  Hook:36 - .......................END AUTOMATION........................Group_1
+22.03.2025 08:03:48 INFO  LoginStepDefs:54 - Home page is successfully displayed
+22.03.2025 08:03:48 INFO  CommonPage:16 - Received Doc - was successfully clicked
+22.03.2025 08:03:48 INFO  CommonPage:20 - Search - was successfully clicked
+22.03.2025 08:03:48 INFO  Hook:36 - .......................END AUTOMATION........................Group_1
