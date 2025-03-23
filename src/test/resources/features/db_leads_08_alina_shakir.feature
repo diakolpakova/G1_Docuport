@@ -1,6 +1,6 @@
 Feature: As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table.
 
-  @ui @docuportDb @leads
+  @ui @docuportDb @leads @smoke
 
   Scenario: verify UI leads matches in DB
     Given user is on Docuport login page
