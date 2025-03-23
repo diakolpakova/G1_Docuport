@@ -96,7 +96,7 @@ public class ClientsPage {
                     WebElement advisorOption = Driver.getDriver().findElement(By.xpath("//div[contains(text(),'" + fieldValue + "')]"));
                     advisorOption.click();
                 } else {
-                    field.clear();
+                    //field.clear();
                     field.sendKeys(fieldValue);
                 }
             } else {
