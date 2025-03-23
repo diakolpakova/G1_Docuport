@@ -25,6 +25,9 @@ public class LeftNavigatePage {
     @FindBy(xpath = "//span[contains(text(),'My uploads')]")
     public WebElement myUploads;
 
+    @FindBy(xpath = "//span[contains(text(),'Clients')]")
+    public WebElement clients;
+
     @FindBy(xpath = "//span[contains(text(),'Invitations')]")
     public WebElement invitationsButton;
 
@@ -45,6 +48,10 @@ public class LeftNavigatePage {
 
             case "upload":
                 BrowserUtils.waitForClickable(uploadButton, 10).click();
+                break;
+
+            case "clients":
+                BrowserUtils.waitForClickable(clients, 10).click();
                 break;
 
             case "invitations":

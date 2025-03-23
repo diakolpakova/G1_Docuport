@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.docuport_g1.test</groupId>
-    <artifactId>Docuport_G1</artifactId>
+    <groupId>io.loop.test</groupId>
+    <artifactId>G1_Docuport</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -123,6 +123,7 @@
             <scope>test</scope>
         </dependency>
 
+
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -168,6 +169,9 @@
             <artifactId>poi</artifactId>
             <version>5.4.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/me.jvt.cucumber/reporting-plugin -->
+
+
 
 
 

@@ -37,10 +37,10 @@ public class DB_Utility {
     public static void createConnection(){
 
         // PLEASE MAKE SURE YOU UPDATE THE IP ADDRESS TO THE ONE YOU HAVE CURRENTLY
-        String url = "jdbc:postgresql://35.222.62.70:5432/postgres" ;
+        String url = "jdbc:oracle:thin:@44.201.130.124:1521:XE" ;
         //String url = ConfigurationReader.getProperty("hr.db.url"); // Since we have added configuration.properties and ConfigReader, I can get directly from there as well
-        String username =  "tstadmin";
-        String password =  "pamBam-Gagmon-85tmrw";
+        String username =  "hr";
+        String password =  "hr";
 
 
         createConnection(url, username, password);
