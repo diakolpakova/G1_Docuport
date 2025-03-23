@@ -14,7 +14,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "io/docuport_g1/step_definitions",
         dryRun = false,
-        tags = "@gulnar",
+         Feature/Yuliia
+        tags = "@newPersonalClient",
         monochrome = true
 )
 
