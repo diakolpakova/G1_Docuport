@@ -16,4 +16,4 @@ Feature: Validate Left Navigation items for advisor user
       | Bookkeeping     |
       | 1099 Form       |
       | Reconciliations |
-    Then user logs out
+    And user should successfully logout

@@ -105,6 +105,7 @@ public class LoginStepDefs {
         LOG.info("user enters password for advisor");
     }
 
+
     @Then("user should be able to see the home for advisor")
     public void user_should_be_able_to_see_the_home_for_advisor() {
         Assert.assertTrue(BrowserUtils.waitForVisibility(loginPage.homeIcon,10).isDisplayed());
