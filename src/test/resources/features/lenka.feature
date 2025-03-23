@@ -1,6 +1,5 @@
 Feature: Validate Left Navigation items for advisor user
-
-  @advisor @smoke
+  @smoke
   Scenario: Validate Left nav
     Given user is on Docuport login page
     When user enters username and password for advisor
