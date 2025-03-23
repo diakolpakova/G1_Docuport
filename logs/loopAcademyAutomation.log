@@ -1,2 +1,18 @@
-22.03.2025 04:54:27 INFO  Hook:26 - .......................START AUTOMATION......................Group_1
-22.03.2025 04:54:27 INFO  Hook:36 - .......................END AUTOMATION........................Group_1
+
+23.03.2025 07:08:46 INFO  LoginStepDefs:31 - user is on docuport login page
+23.03.2025 07:08:46 INFO  LoginStepDefs:102 - user enters advisor username
+23.03.2025 07:08:46 INFO  LoginStepDefs:105 - user enters password for advisor
+23.03.2025 07:08:46 INFO  LoginStepDefs:48 - user clicks login button
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Home exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Received docs exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - My uploads exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Clients exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Invitations exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Users exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Leads exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Bookkeeping exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - 1099 Form exists
+23.03.2025 07:08:46 INFO  NavBarStepDefs:22 - Reconciliations exists
+23.03.2025 07:08:46 INFO  DocuportStepDefs:16 - User logged out
+23.03.2025 07:08:46 INFO  Hook:36 - .......................END AUTOMATION........................Group_1
+
