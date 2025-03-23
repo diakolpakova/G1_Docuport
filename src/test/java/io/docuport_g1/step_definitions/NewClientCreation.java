@@ -37,11 +37,22 @@ public class NewClientCreation {
     }
 
 
-    @When("user clicks Create new client dropdown and choose Business")
-    public void user_clicks_dropdown_and_choose_business() {
-        clientsPage.createNewClientButton.click();
-        clientsPage.business.click();
-        logger.info("Clicked Create New Client and Choose Personal");
+    @When("user clicks Create new client dropdown and choose {string}")
+    public void user_clicks_dropdown_and_choose_type(String clientType) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clientsPage.createNewClientDropdown)).click();
+
+        if (clientType.equalsIgnoreCase("Business")) {
+            clientsPage.business.click();
+            logger.info("Clicked Create New Client and Choose Business");
+
+        } else if (clientType.equalsIgnoreCase("Personal")) {
+            clientsPage.personal.click();
+            logger.info("Clicked Create New Client and Choose Personal");
+
+        } else {
+            throw new IllegalArgumentException("Invalid client type: " + clientType);
+        }
     }
 
     @When("create new client window popped up user clicks Create new user checkbox")
@@ -63,11 +74,10 @@ public class NewClientCreation {
         }
     }
 
-    @Then("user fills out all required fields except first and last name")
-    public void user_fills_out_all_required_fields_except_first_and_last_name(Map<String, String> fieldsAndValues) {
+    @Then("user fills out all required fields except first and last name for {string}")
+    public void user_fills_out_all_required_fields_except_first_and_last_name(String clientType, Map <String, String> fieldsAndValues) {
 
-
-        clientsPage.newClientInputs(fieldsAndValues);
+        clientsPage.newClientInputs(fieldsAndValues, clientType);
         logger.info("New client creation field filled");
     }
 

@@ -16,15 +16,13 @@ public class ClientsPage {
     }
 
     @FindBy(xpath = "//span[contains(text(),'Create')]/ancestor::button[@type='button']")
-    public WebElement createNewClientButton;
+    public WebElement createNewClientDropdown;
     @FindBy(xpath = "//span[contains(text(),'Personal') and preceding-sibling::i]")
     public WebElement personal;
     @FindBy(xpath = "//span[.='Business']")
     public WebElement business;
     @FindBy(xpath = "//label[contains(text(),'new user')]")
     public WebElement newUserCheckbox;
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement submitButton;
     @FindBy(xpath = "//span[contains(text(),'Save')]/..")
     public WebElement saveButton;
 
@@ -66,7 +64,7 @@ public class ClientsPage {
 
 
     //Creating New client input information method
-    public void newClientInputs(Map<String, String> inputs) {
+    public void newClientInputs(Map<String, String> inputs, String clientType) {
 //Map of all fields and corresponding inputs for them
         Map<String, WebElement> fieldsAndInputElems = new HashMap<>();
         fieldsAndInputElems.put("Company name", companyName);
@@ -82,8 +80,16 @@ public class ClientsPage {
         for (Map.Entry<String, String> entry : inputs.entrySet()) {
             String fieldName = entry.getKey();
             String fieldValue = entry.getValue();
+
             if (fieldsAndInputElems.containsKey(fieldName)) {
+                // EXCLUDE COMPANY NAME FIELD FOR PERSONAL CLIENT
+                if (clientType.equalsIgnoreCase("personal") &&
+                        fieldName.equalsIgnoreCase("company name")
+                ) {
+                    continue;
+                }
                 WebElement field = fieldsAndInputElems.get(fieldName);
+
                 if (fieldName.equals("Advisor")) {
                     field.click();
 
