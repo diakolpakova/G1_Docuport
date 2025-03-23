@@ -11,30 +11,30 @@ import static io.docuport_g1.step_definitions.Hook.driver;
 
 public class LoginStepDefs {
 
-    @Given("пользователь находится на странице Docuport")
+    @Given("user the are on the Docuport")
     public void the_user_is_on_the_docuport_page() {
         driver.get("https://www.docuport.com");
-        // Убедитесь, что страница полностью загружена
+        // page it the upload
         Assert.assertTrue(driver.getTitle().contains("Docuport"));
     }
 
-    @When("пользователь вводит {string} в поле {string} на странице {string}")
+    @When("user typing {string} in {string} on the page {string}")
     public void the_user_inserts_into_the_field_on_the_page(String value, String fieldName, String pageName) {
-        WebElement field = driver.findElement(By.name(fieldName)); // Находим поле по имени
-        field.sendKeys(value); // Вводим значение в поле
+        WebElement field = driver.findElement(By.name(fieldName)); // Find a field by name
+        field.sendKeys(value); // puts info on the line
     }
 
-    @When("пользователь нажимает на кнопку {string} на странице {string}")
+    @When("user press button the {string} on the page {string}")
     public void the_user_clicks_the_button_on_the_page(String buttonLabel, String pageName) {
         WebElement button = driver.findElement(By.xpath("//button[contains(text(), '" + buttonLabel + "')]"));
-        button.click(); // Нажимаем на кнопку
+        button.click(); // press the button
     }
 
     @Then("пользователь должен успешно войти в систему")
     public void the_user_should_be_logged_in_successfully() {
-        // Проверяем, был ли пользователь перенаправлен на домашнюю страницу после входа
-        WebElement homePageElement = driver.findElement(By.id("homePageElementId")); // Замените ID на актуальный
-        Assert.assertTrue("Пользователь не вошел в систему успешно", homePageElement.isDisplayed());
+        // check loggin user in the system or not
+        WebElement homePageElement = driver.findElement(By.id("homePageElementId")); // to change id for actual
+        Assert.assertTrue("user entrace in the system", homePageElement.isDisplayed());
     }
 }
 
