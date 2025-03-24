@@ -22,11 +22,6 @@ public class LeadsStepsDefs {
     LeadsPage leadsPage = new LeadsPage();
 
 
-    @When("the user navigates to {string} page")
-    public void the_user_navigates_to_page(String leads) {
-        leftNavigatePage.clickButton(leads);
-    }
-
     List<Map<String, String>> expectedList;
 
     @When("the user gets all the leads information based on {string} and {string} and {string}")
