@@ -57,18 +57,10 @@ public class Driver {
 
                 case "headless":
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless=new"); // or fallback to "--headless"
-                    options.addArguments("--no-sandbox");
-                    options.addArguments("--disable-dev-shm-usage");
-                    options.addArguments("--disable-gpu"); // good to include, even on headless
-                    options.addArguments("--remote-debugging-port=9222");
-                    options.addArguments("--window-size=1920,1080");
-
-                    // Optional if issues persist
-                    options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-                    options.addArguments("--data-path=/tmp/chrome-data");
-
-                    WebDriver driver = new ChromeDriver(options);
+                    options.addArguments("--headless");
+                    driverPool.set(new ChromeDriver(options));
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 
             }
