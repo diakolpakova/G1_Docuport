@@ -57,11 +57,16 @@ public class Driver {
 
                 case "headless":
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless=new"); // use "--headless=new" for newer versions
+                    options.addArguments("--headless=new"); // or fallback to "--headless"
                     options.addArguments("--no-sandbox");
                     options.addArguments("--disable-dev-shm-usage");
-                    options.addArguments("--disable-gpu"); // optional, useful in CI environments
-                    options.addArguments("--remote-allow-origins=*"); // optional for CORS errors
+                    options.addArguments("--disable-gpu"); // good to include, even on headless
+                    options.addArguments("--remote-debugging-port=9222");
+                    options.addArguments("--window-size=1920,1080");
+
+                    // Optional if issues persist
+                    options.addArguments("--user-data-dir=/tmp/chrome-user-data");
+                    options.addArguments("--data-path=/tmp/chrome-data");
 
                     WebDriver driver = new ChromeDriver(options);
                     break;
