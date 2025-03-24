@@ -102,6 +102,8 @@ public class ClientsPage {
                     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
                     wait.until(ExpectedConditions.visibilityOf(field)).clear();
+
+                    //field.clear();
                     field.sendKeys(fieldValue);
                 }
             } else {
