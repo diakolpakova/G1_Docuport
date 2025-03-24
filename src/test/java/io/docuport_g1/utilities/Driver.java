@@ -57,17 +57,13 @@ public class Driver {
 
                 case "headless":
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless=new"); // or --headless
+                    options.addArguments("--headless=new"); // use "--headless=new" for newer versions
                     options.addArguments("--no-sandbox");
                     options.addArguments("--disable-dev-shm-usage");
-                    options.addArguments("--disable-gpu");
-                    options.addArguments("--window-size=1920,1080");
+                    options.addArguments("--disable-gpu"); // optional, useful in CI environments
+                    options.addArguments("--remote-allow-origins=*"); // optional for CORS errors
 
-                    // optionally specify binary if needed
-                    //options.setBinary("/usr/bin/google-chrome");
-                    driverPool.set(new ChromeDriver(options));
-                    driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    WebDriver driver = new ChromeDriver(options);
                     break;
 
             }
