@@ -5,7 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -96,7 +99,9 @@ public class ClientsPage {
                     WebElement advisorOption = Driver.getDriver().findElement(By.xpath("//div[contains(text(),'" + fieldValue + "')]"));
                     advisorOption.click();
                 } else {
-                    field.clear();
+                    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+
+                    wait.until(ExpectedConditions.visibilityOf(field)).clear();
                     field.sendKeys(fieldValue);
                 }
             } else {

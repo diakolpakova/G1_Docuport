@@ -1,9 +1,6 @@
-23.03.2025 11:36:27 INFO  LoginStepDefs:31 - user is on docuport login page
-23.03.2025 11:36:27 INFO  LoginStepDefs:37 - user enters username
-23.03.2025 11:36:27 INFO  LoginStepDefs:43 - user enters password
-23.03.2025 11:36:27 INFO  LoginStepDefs:48 - user clicks login button
-23.03.2025 11:36:27 INFO  NavBarStepDefs:22 - Home exists
-23.03.2025 11:36:27 INFO  NavBarStepDefs:22 - Received docs exists
-23.03.2025 11:36:27 INFO  NavBarStepDefs:22 - My uploads exists
-23.03.2025 11:36:27 INFO  NavBarStepDefs:22 - Invitations exists
-23.03.2025 11:36:27 INFO  Hook:36 - .......................END AUTOMATION........................Group_1
+24.03.2025 10:02:25 INFO  LoginStepDefs:39 - user is on docuport login page
+24.03.2025 10:02:25 INFO  LoginStepDefs:95 - user enters username
+24.03.2025 10:02:25 INFO  LoginStepDefs:100 - user enters password
+24.03.2025 10:02:25 INFO  LoginStepDefs:56 - user clicks login button
+24.03.2025 10:02:25 INFO  LoginStepDefs:107 - Home page is successfully displayed
+24.03.2025 10:02:25 INFO  Hook:38 - .......................END AUTOMATION........................Group_1
