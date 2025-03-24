@@ -1,5 +1,5 @@
 Feature: As a data consumer, I want UI account holder name to be in DB.
-@ui @docuportDb
+@ui @docuportDb @smoke
 Scenario: verify UI user total account count matches in DB
   Given the "advisor" on the home page
   And the user navigates to "Users" page

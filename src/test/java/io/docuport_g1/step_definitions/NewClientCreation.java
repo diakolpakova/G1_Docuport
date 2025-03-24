@@ -56,22 +56,11 @@ public class NewClientCreation {
     }
 
     @When("create new client window popped up user clicks Create new user checkbox")
-    public void create_new_client_window_popped_up_user_clicks_checkbox() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver()
-                , Duration.ofSeconds(10));
-        try {
-            wait.until(ExpectedConditions.visibilityOf(clientsPage.newUserCheckbox));
-            if (!(clientsPage.newUserCheckbox.isSelected())) {
-                wait.until(ExpectedConditions.visibilityOf(clientsPage.newUserCheckbox)).click();
-                logger.info("Clicked on new user checkbox");
-            }
-            wait.until(ExpectedConditions.elementToBeClickable(clientsPage.newUserCheckbox));
-            logger.info("New user checkbox is selected");
-
-
-        } catch (ElementClickInterceptedException | NoSuchElementException e) {
-
-        }
+    public void create_new_client_window_popped_up_user_clicks_checkbox() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", clientsPage.newUserCheckbox);
+        Thread.sleep(300); // tiny pause to let layout settle
+        clientsPage.newUserCheckbox.click();
     }
 
     @Then("user fills out all required fields except first and last name for {string}")
