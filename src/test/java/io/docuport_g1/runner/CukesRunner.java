@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         plugin = {
                 "pretty",
                 "json:target/json-reports/json-report.json",
-                "html:target/cucumber-html-report"
+                "html:target/cucumber-html-report",
+                "timeline:target/cucumber-timeline"
 
         },
         dryRun = false,
