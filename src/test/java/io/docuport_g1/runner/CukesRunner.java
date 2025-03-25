@@ -10,10 +10,11 @@ import org.junit.runner.RunWith;
         glue = "io.docuport_g1.step_definitions",
         plugin = {
                 "pretty",
-                "html:target/cucumber-html-report",
-                "json:target/json-reports/json-report.json"
+                "json:target/json-reports/json-report.json",
+                "html:target/cucumber-html-report"
+
         },
         dryRun = false,
-        tags = "@smoke"
+        tags = ""
 )
 public class CukesRunner {}

@@ -4,7 +4,7 @@ Feature: Docuport Login Logout Feature
   Background: this is for navigating Docuport login page+
     Given user is on Docuport login page
 
-  @smoke
+  @smoke @ZZ
   Scenario: Login as a client
     When user enters username for client
     And user enters password for client
