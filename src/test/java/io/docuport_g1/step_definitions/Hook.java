@@ -1,9 +1,6 @@
 package io.docuport_g1.step_definitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import io.docuport_g1.utilities.BrowserUtils;
 import io.docuport_g1.utilities.ConfigurationReader;
 import io.docuport_g1.utilities.DB_Utility;
@@ -18,6 +15,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.Collections;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.Configuration;
@@ -71,16 +70,36 @@ public class Hook {
         DB_Utility.destroy();
     }
 
+    @BeforeAll
+    public static void beforeAll() {
+        // Clean any existing report files
+        File jsonFile = new File("target/cucumber.json");
+        if (jsonFile.exists()) {
+            jsonFile.delete();
+        }
+    }
+
     @AfterAll
-    public static void generateReport() {
-        File reportOutputDirectory = new File("target/cucumber-html-reports");
-        String jsonPath = "target/cucumber.json";
-
-        Configuration config = new Configuration(reportOutputDirectory, "G1_Docuport");
-        ReportBuilder reportBuilder = new ReportBuilder(
-                Collections.singletonList(jsonPath), config);
-
-        reportBuilder.generateReports();
+    public static void afterAll() {
+        // Verify report was created
+        File jsonFile = new File("target/cucumber.json");
+        if (!jsonFile.exists()) {
+            System.err.println("ERROR: cucumber.json was not generated!");
+            try {
+                // Create empty file as fallback
+                Files.write(jsonFile.toPath(), "[]".getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (jsonFile.length() == 0) {
+            System.err.println("ERROR: cucumber.json is empty!");
+            try {
+                // Write empty array as fallback
+                Files.write(jsonFile.toPath(), "[]".getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

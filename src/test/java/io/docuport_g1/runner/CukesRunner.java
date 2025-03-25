@@ -7,15 +7,14 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "io.docuport_g1.step_definitions",
+        glue = {"io.docuport_g1.step_definitions", "io.docuport_g1.hooks"}, // Add hooks package
         plugin = {
                 "pretty",
-                "json:target/json-reports/json-report.json",
+                "json:target/cucumber.json",
                 "html:target/cucumber-html-report",
-                "timeline:target/cucumber-timeline"
-
+                //"timeline:target/cucumber-timeline"
         },
-        dryRun = false,
+        monochrome = true,
         tags = ""
 )
 public class CukesRunner {}

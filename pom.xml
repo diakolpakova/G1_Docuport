@@ -29,24 +29,7 @@
                     <release>17</release>
                 </configuration>
             </plugin>
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-failsafe-plugin</artifactId>-->
-            <!--                <version>3.0.0-M5</version>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <goals>-->
-            <!--                            <goal>integration-test</goal>-->
-            <!--                            <goal>verify</goal>-->
-            <!--                        </goals>-->
-            <!--                        <configuration>-->
-            <!--                            <includes>-->
-            <!--                                <include>**/CukesTest.java</include>-->
-            <!--                            </includes>-->
-            <!--                        </configuration>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
+
 
 
             <plugin>
@@ -54,23 +37,16 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+                    <includes>
+                        <include>**/CukesRunner.java</include>
+                    </includes>
+                    <systemPropertyVariables>
+                        <cucumber.execution.dry-run>false</cucumber.execution.dry-run>
+                    </systemPropertyVariables>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>surefire-tests</id>
-                        <phase>verify</phase> <!-- add this! -->
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <includes>
-                                <include>**/CukesRunner.java</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
+            <!-- Simplified reporting plugin -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -88,6 +64,10 @@
                             <jsonFiles>
                                 <param>${project.build.directory}/cucumber.json</param>
                             </jsonFiles>
+                            <!-- Add these configurations -->
+                            <checkBuildResult>false</checkBuildResult>
+                            <skip>false</skip>
+                            <buildNumber>1</buildNumber>
                         </configuration>
                     </execution>
                 </executions>
@@ -115,17 +95,24 @@
             <version>42.7.5</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.14.0</version> <!-- Latest version as of Oct 2023 -->
+            <version>4.30.0</version>
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.6.3</version>
+            <version>5.9.2</version>
+        </dependency>
+        <dependency>
+        <groupId>net.masterthought</groupId>
+        <artifactId>cucumber-reporting</artifactId>
+        <version>5.8.4</version>
         </dependency>
 
 
@@ -154,12 +141,12 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>me.jvt.cucumber</groupId>
-            <artifactId>reporting-plugin</artifactId>
-            <version>7.2.0</version>
-        </dependency>
-
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/me.jvt.cucumber/reporting-plugin &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>me.jvt.cucumber</groupId>-->
+<!--            <artifactId>reporting-plugin</artifactId>-->
+<!--            <version>7.2.0</version>-->
+<!--        </dependency>-->
 
 
         <dependency>
@@ -167,6 +154,11 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.16.0</version>
         </dependency>
 
         <dependency>
@@ -190,11 +182,11 @@
             <version>2.23.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>tech.grasshopper</groupId>
-            <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.14.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>tech.grasshopper</groupId>-->
+<!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+<!--            <version>1.14.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.aventstack</groupId>
