@@ -31,51 +31,57 @@ public class Driver {
 
     /**
      * singleton pattern
-     * @return
+     *@return
      */
-    public static WebDriver getDriver(){
-        if(driverPool.get()==null){
+    public static WebDriver getDriver() {
+        if (driverPool.get() == null) {
             String browserType = ConfigurationReader.getProperties("browser");
             switch (browserType.toLowerCase()){
                 case "chrome":
-                    driverPool.set(new ChromeDriver());
-                    driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    ChromeOptions chromeOptions = new ChromeOptions();
+
+                    chromeOptions.addArguments("--headless=new");
+
+                    chromeOptions.addArguments("--no-sandbox");
+                    chromeOptions.addArguments("--disable-dev-shm-usage");
+                    chromeOptions.addArguments("--disable-gpu");
+                    chromeOptions.addArguments("--window-size=1920,1080");
+
+                    driverPool.set(new ChromeDriver(chromeOptions));
                     break;
 
                 case "firefox":
                     driverPool.set(new FirefoxDriver());
                     driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
                     break;
 
                 case "safari":
                     driverPool.set(new SafariDriver());
                     driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
                     break;
 
                 case "headless":
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless=new"); // or "--headless" if Chrome < 109
-                    options.addArguments("--no-sandbox");
-                    options.addArguments("--disable-dev-shm-usage");
-                    options.addArguments("--disable-gpu");
-                    options.addArguments("--window-size=1920,1080");
+                    ChromeOptions headlessOptions = new ChromeOptions();
 
-                    driverPool.set(new ChromeDriver(options));
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    headlessOptions.addArguments("--headless=new");
+
+                    headlessOptions.addArguments("--no-sandbox");
+                    headlessOptions.addArguments("--disable-dev-shm-usage");
+                    headlessOptions.addArguments("--disable-gpu");
+                    headlessOptions.addArguments("--window-size=1920,1080");
+
+                    driverPool.set(new ChromeDriver(headlessOptions));
                     break;
-
             }
-
         }
         return driverPool.get();
     }
 
     /**
      * closing driver
-     * @author nsh
+     * @author zck
      */
     public static void closeDriver(){
         if(driverPool.get()!=null){
