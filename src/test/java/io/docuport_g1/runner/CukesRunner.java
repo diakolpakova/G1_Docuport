@@ -6,16 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {
-                "pretty",
-                "json:target/json-reports/json-report.json",
-                "html:target/cucumber-html-report"
-        },
         features = "src/test/resources/features",
         glue = "io.docuport_g1.step_definitions",
+        plugin = {
+                "pretty",
+                "html:target/cucumber-html-report",
+                "json:target/json-reports/json-report.json"
+        },
         dryRun = false,
-        monochrome = true,
-        tags = "" // or remove if you want all features to run
+        tags = "@smoke"
 )
-public class CukesRunner {
-}
+public class CukesRunner {}
