@@ -57,9 +57,13 @@ public class Driver {
 
                 case "headless":
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless");
+                    options.addArguments("--headless=new"); // or "--headless" if Chrome < 109
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--window-size=1920,1080");
+
                     driverPool.set(new ChromeDriver(options));
-                    driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 
