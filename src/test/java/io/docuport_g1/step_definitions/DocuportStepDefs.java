@@ -12,6 +12,14 @@ import io.docuport_g1.utilities.ConfigurationReader;
 import io.docuport_g1.utilities.DB_Utility;
 import io.docuport_g1.utilities.Driver;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 
 public class DocuportStepDefs extends BasePage {
@@ -30,6 +38,7 @@ public class DocuportStepDefs extends BasePage {
     }
     @When("the user gets total user count")
     public void the_user_gets_total_user_count() {
+        BrowserUtils.waitForStaleElement(userPage.searchButton);
         userPage.searchButton.click();
         userPage.clickRadioButton("All");
         BrowserUtils.waitFor(5);

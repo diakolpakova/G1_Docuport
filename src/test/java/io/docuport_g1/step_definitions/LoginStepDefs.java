@@ -64,10 +64,12 @@ public class LoginStepDefs {
     }
     @Then("user should successfully logout")
     public void user_should_successfully_logout() {
-        //rowserUtils.justWait(10);
+
+        BrowserUtils.waitForStaleElement(loginPage.bgDropdown);
         loginPage.bgDropdown.click();
-        //BrowserUtils.justWait(10);
+        BrowserUtils.justWait(10);
         loginPage.logOutButton.click();
+        BrowserUtils.justWait(10);
         LOG.info("Log out page is successfully displayed");
     }
 

@@ -1,6 +1,7 @@
 package io.docuport_g1.utilities;
 
 import io.cucumber.java.Scenario;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -22,6 +23,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertTrue;
+import org.apache.commons.io.FileUtils;
 
 
 public class BrowserUtils {
@@ -30,9 +32,9 @@ public class BrowserUtils {
 
     /**
      * takes screenshot
-     * @author nsh
+     * @author zck
      */
-    public static void takeScreenshot(){
+    public static void takeScreenshot(String beforeClickingSearch){
         try{
             myScenario.log("Current url is: " +Driver.getDriver().getCurrentUrl());
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -306,6 +308,18 @@ public class BrowserUtils {
 
 
     }
+    public static void waitForPageToLoad(long timeoutInSeconds) {
+        ExpectedCondition<Boolean> expectation = driver ->
+                ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+
+        try {
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeoutInSeconds));
+            wait.until(expectation);
+        } catch (Throwable error) {
+            System.out.println("Timeout waiting for Page Load Request to complete.");
+        }
+    }
+
 }
 
 

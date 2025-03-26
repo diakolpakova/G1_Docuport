@@ -1,5 +1,6 @@
 package io.docuport_g1.pages;
 
+import io.docuport_g1.utilities.BrowserUtils;
 import io.docuport_g1.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -95,9 +96,9 @@ public class ClientsPage {
 
                 if (fieldName.equals("Advisor")) {
                     field.click();
-
+                    BrowserUtils.waitFor(10);
                     WebElement advisorOption = Driver.getDriver().findElement(By.xpath("//div[contains(text(),'" + fieldValue + "')]"));
-                    advisorOption.click();
+                    BrowserUtils.waitForVisibility(advisorOption,10).click();
                 } else {
                     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
@@ -117,6 +118,6 @@ public class ClientsPage {
     public boolean isNewClientCreated(String email) {
         emailInputInSearchClient.sendKeys(email);
         submitSearchButton.click();
-        return searchResults.isDisplayed();
+        return BrowserUtils.waitForVisibility(searchResults,10).isDisplayed();
     }
 }

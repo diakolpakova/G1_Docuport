@@ -3,6 +3,7 @@ package io.docuport_g1.step_definitions;
 import io.cucumber.java.en.*;
 import io.docuport_g1.pages.ClientsPage;
 import io.docuport_g1.pages.LeftNavigatePage;
+import io.docuport_g1.utilities.BrowserUtils;
 import io.docuport_g1.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.*;
@@ -43,11 +44,11 @@ public class NewClientCreation {
         wait.until(ExpectedConditions.elementToBeClickable(clientsPage.createNewClientDropdown)).click();
 
         if (clientType.equalsIgnoreCase("Business")) {
-            clientsPage.business.click();
+           BrowserUtils.waitForVisibility(clientsPage.business,10).click();
             logger.info("Clicked Create New Client and Choose Business");
 
         } else if (clientType.equalsIgnoreCase("Personal")) {
-            clientsPage.personal.click();
+            BrowserUtils.waitForVisibility(clientsPage.personal,10).click();
             logger.info("Clicked Create New Client and Choose Personal");
 
         } else {
@@ -65,8 +66,9 @@ public class NewClientCreation {
 
     @Then("user fills out all required fields except first and last name for {string}")
     public void user_fills_out_all_required_fields_except_first_and_last_name(String clientType, Map <String, String> fieldsAndValues) {
-
+        BrowserUtils.waitFor(5);
         clientsPage.newClientInputs(fieldsAndValues, clientType);
+        BrowserUtils.waitFor(5);
         logger.info("New client creation field filled");
     }
 

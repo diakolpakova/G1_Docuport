@@ -3,6 +3,7 @@ package io.docuport_g1.step_definitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.docuport_g1.pages.POM;
+import io.docuport_g1.utilities.BrowserUtils;
 import io.docuport_g1.utilities.ConfigurationReader;
 import io.docuport_g1.utilities.DB_Utility;
 import io.docuport_g1.utilities.Driver;
@@ -24,18 +25,29 @@ public class NewClientStepDefs {
         clientEmail = clientInfo.get("Email address");
 
         pages.getDocuportBasePage().clients.click();
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().createNewClient.click();
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().accountTypePersonal.click();
-
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().firstName.sendKeys(clientInfo.get("First name"), Keys.ENTER);
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().lastName.sendKeys(clientInfo.get("Last name"), Keys.ENTER);
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().createNewUserCheckBox.click();
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().emailAddress.sendKeys(clientInfo.get("Email address"), Keys.ENTER);
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().advisor.click();
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().advisorDropDown.click();
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().phoneNumber.sendKeys(clientInfo.get("Phone number"), Keys.ENTER);
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().password.sendKeys(clientInfo.get("Password"), Keys.ENTER);
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().confirmPassword.sendKeys(clientInfo.get("Password"), Keys.ENTER);
+        BrowserUtils.waitFor(5);
         pages.getDocuportBasePage().save.click();
 
     }
@@ -43,8 +55,9 @@ public class NewClientStepDefs {
     @When("validate the new client created")
     public void validate_the_new_client_created() {
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(pages.getDocuportBasePage().successfulMessage));
+        BrowserUtils.waitForStaleElement(pages.getDocuportBasePage().successfulMessage);
+        BrowserUtils.waitFor(5);
+        pages.getDocuportBasePage().successfulMessage.click();
         Assert.assertTrue("User has not created",pages.getDocuportBasePage().successfulMessage.isEnabled());
 
     }
@@ -78,7 +91,7 @@ public class NewClientStepDefs {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(pages.getDocuportBasePage().bgbutton));
         pages.getDocuportBasePage().bgbutton.click();
-        pages.getDocuportBasePage().logOut.click();
+        wait.until(ExpectedConditions.elementToBeClickable(pages.getDocuportBasePage().logOut)).click();
 
     }
 
