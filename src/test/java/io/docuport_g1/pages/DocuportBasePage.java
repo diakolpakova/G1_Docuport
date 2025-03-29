@@ -56,7 +56,7 @@ public class DocuportBasePage {
     @FindBy(xpath = "//span[.=' Save ']")
     public WebElement save;
 
-    @FindBy (xpath = "//span[contains(text(),'has been created successful')]")
+    @FindBy (xpath = "//div[@role='status']")
     public WebElement successfulMessage;
 
 

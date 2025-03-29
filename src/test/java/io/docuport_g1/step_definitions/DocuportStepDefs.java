@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.docuport_g1.pages.BasePage;
+import io.docuport_g1.pages.LeftNavigatePage;
 import io.docuport_g1.pages.LoginPage;
 import io.docuport_g1.pages.UserPage;
 import io.docuport_g1.utilities.BrowserUtils;
@@ -26,6 +27,7 @@ public class DocuportStepDefs extends BasePage {
     LoginPage loginPage=new LoginPage();
     UserPage userPage = new UserPage();
     String uiUserCount;
+    LeftNavigatePage leftNavigatePage = new LeftNavigatePage();
     @Given("the {string} on the home page")
     public void the_on_the_home_page(String usertype) throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperties("docuportUiUrl"));
@@ -34,7 +36,8 @@ public class DocuportStepDefs extends BasePage {
     }
     @Given("the user navigates to {string} page")
     public void the_user_navigates_to_page(String moduleName) {
-        userPage.clickModule(moduleName);
+        BrowserUtils.waitFor(5);
+        leftNavigatePage.clickButton(moduleName);
     }
     @When("the user gets total user count")
     public void the_user_gets_total_user_count() {

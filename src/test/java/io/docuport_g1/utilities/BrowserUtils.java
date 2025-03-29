@@ -320,6 +320,16 @@ public class BrowserUtils {
         }
     }
 
+    public static boolean elementExists(By locator) {
+        try {
+            Driver.getDriver().findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+
 }
 
 

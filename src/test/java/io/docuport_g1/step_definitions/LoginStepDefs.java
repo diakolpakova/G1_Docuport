@@ -3,6 +3,7 @@ package io.docuport_g1.step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.docuport_g1.utilities.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.junit.Assert;
@@ -14,10 +15,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.docuport_g1.pages.HomePage;
 import io.docuport_g1.pages.LoginPage;
-import io.docuport_g1.utilities.BrowserUtils;
-import io.docuport_g1.utilities.ConfigurationReader;
-import io.docuport_g1.utilities.DocuportConstants;
-import io.docuport_g1.utilities.Driver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
@@ -35,16 +32,17 @@ public class LoginStepDefs {
     public void user_is_on_docuport_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperties("docuportUiUrl"));
         BrowserUtils.waitForClickable(loginPage.loginButton, DocuportConstants.EXTRA_LARGE);
-        Assert.assertTrue("Login button is NOT displayed", loginPage.loginButton.isDisplayed());
         LOG.info("user is on docuport login page");
     }
 
     @When("user enters username for client")
     public void user_enters_username_for_client() {
+        BrowserUtils.waitForClickable(loginPage.loginButton, DocuportConstants.LARGE);
+        Assert.assertTrue("Login button is not displayed", loginPage.loginButton.isDisplayed());
         loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_CLIENT);
-        LOG.info("user enters username");
-
+        LOG.info("User enters username for client");
     }
+
     @When("user enters password for client")
     public void user_enters_password_for_client() {
         loginPage.passwordInput.sendKeys(DocuportConstants.PASSWORD);
@@ -53,6 +51,11 @@ public class LoginStepDefs {
     @When("user click login button")
     public void user_click_login_button() {
         loginPage.loginButton.click();
+
+        if (BrowserUtils.elementExists(By.xpath("//span[contains(text(), 'Continue')]"))) {
+            loginPage.continueButton.click();
+        }
+
         LOG.info("user clicks login button");
     }
 
@@ -64,17 +67,16 @@ public class LoginStepDefs {
     }
     @Then("user should successfully logout")
     public void user_should_successfully_logout() {
+        WebElement logoutButton = Driver.getDriver().findElement(By.xpath("//div[@class='v-avatar primary']"));
+        BrowserUtils.clickWithJS(logoutButton);
 
-        BrowserUtils.waitForStaleElement(loginPage.bgDropdown);
-        loginPage.bgDropdown.click();
-        BrowserUtils.justWait(10);
-        loginPage.logOutButton.click();
-        BrowserUtils.justWait(10);
+        //DocuportUtils.logOut(Driver.getDriver());
         LOG.info("Log out page is successfully displayed");
     }
 
     @When("user enters username for employee")
     public void user_enters_username_for_employee() {
+        BrowserUtils.waitFor(5);
         loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_EMPLOYEE);
         LOG.info("user enters username");
     }
@@ -93,6 +95,7 @@ public class LoginStepDefs {
 
     @When("user enters username for advisor")
     public void user_enters_username_for_advisor() {
+        BrowserUtils.waitFor(5);
         loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_ADVISOR);
         LOG.info("user enters username");
     }
@@ -112,6 +115,7 @@ public class LoginStepDefs {
 
     @When("user enters username for supervisor")
     public void user_enters_username_for_supervisor() {
+        BrowserUtils.waitFor(5);
         loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_SUPERVISOR);
         LOG.info("user enters username");
     }

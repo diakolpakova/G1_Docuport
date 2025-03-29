@@ -1,4 +1,3 @@
-
 @smoke
 Feature: Validate Left Navigation items for client
 

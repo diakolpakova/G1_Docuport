@@ -6,15 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
-        glue = {"io.docuport_g1.step_definitions", "io.docuport_g1.hooks"}, // Add hooks package
         plugin = {
                 "pretty",
-                "json:target/cucumber.json",
-                "html:target/cucumber-html-report",
-                //"timeline:target/cucumber-timeline"
+                "json:target/cucumber.json",         // ✅ This generates the JSON report
+                "html:target/cucumber-html-report"   // Optional, generates HTML report
         },
-        monochrome = true,
-        tags = ""
+        features = "src/test/resources/features",
+        glue = "io.docuport_g1.step_definitions",
+        dryRun = false
 )
+
 public class CukesRunner {}

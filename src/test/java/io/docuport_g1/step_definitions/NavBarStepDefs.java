@@ -15,7 +15,7 @@ public class NavBarStepDefs {
 
     @Then("validate left navigation items")
     public void validate_left_navigation_items(List<String> items) {
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
         items.forEach(item -> {
             try {
                 // Try to find the element containing the text provided in item

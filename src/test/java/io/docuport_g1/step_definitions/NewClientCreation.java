@@ -66,9 +66,9 @@ public class NewClientCreation {
 
     @Then("user fills out all required fields except first and last name for {string}")
     public void user_fills_out_all_required_fields_except_first_and_last_name(String clientType, Map <String, String> fieldsAndValues) {
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
         clientsPage.newClientInputs(fieldsAndValues, clientType);
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
         logger.info("New client creation field filled");
     }
 

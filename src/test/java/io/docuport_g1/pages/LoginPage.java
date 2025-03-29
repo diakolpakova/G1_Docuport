@@ -24,7 +24,7 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
-    @FindBy(xpath = "//span[.=' Continue ']")
+    @FindBy(xpath = "//span[contains(text(), 'Continue')]")
     public WebElement continueButton;
 
     @FindBy(xpath = "//div[@role='listbox']//a[1]")
