@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "io.docuport_g1.step_definitions",
+        monochrome = true,
         dryRun = false
 )
 

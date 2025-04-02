@@ -75,7 +75,7 @@
                 <executions>
                     <execution>
                         <id>cucumber-reports</id>
-                        <phase>verify</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
