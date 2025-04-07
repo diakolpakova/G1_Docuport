@@ -1,5 +1,6 @@
 package io.docuport_g1.utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -37,17 +38,18 @@ public class Driver {
         if (driverPool.get() == null) {
             String browserType = ConfigurationReader.getProperties("browser");
             switch (browserType.toLowerCase()){
+
                 case "chrome":
-                    ChromeOptions chromeOptions = new ChromeOptions();
-
-                    chromeOptions.addArguments("--headless=new");
-
-                    chromeOptions.addArguments("--no-sandbox");
-                    chromeOptions.addArguments("--disable-dev-shm-usage");
-                    chromeOptions.addArguments("--disable-gpu");
-                    chromeOptions.addArguments("--window-size=1920,1080");
-
-                    driverPool.set(new ChromeDriver(chromeOptions));
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--remote-allow-origins=*");
+                    driverPool.set(new ChromeDriver(options));
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 
                 case "firefox":
@@ -62,18 +64,18 @@ public class Driver {
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
                     break;
 
-                case "headless":
-                    ChromeOptions headlessOptions = new ChromeOptions();
-
-                    headlessOptions.addArguments("--headless=new");
-
-                    headlessOptions.addArguments("--no-sandbox");
-                    headlessOptions.addArguments("--disable-dev-shm-usage");
-                    headlessOptions.addArguments("--disable-gpu");
-                    headlessOptions.addArguments("--window-size=1920,1080");
-
-                    driverPool.set(new ChromeDriver(headlessOptions));
-                    break;
+//                case "headless":
+//                    ChromeOptions headlessOptions = new ChromeOptions();
+//
+//                    headlessOptions.addArguments("--headless=new");
+//
+//                    headlessOptions.addArguments("--no-sandbox");
+//                    headlessOptions.addArguments("--disable-dev-shm-usage");
+//                    headlessOptions.addArguments("--disable-gpu");
+//                    headlessOptions.addArguments("--window-size=1920,1080");
+//
+//                    driverPool.set(new ChromeDriver(headlessOptions));
+//                    break;
             }
         }
         return driverPool.get();
