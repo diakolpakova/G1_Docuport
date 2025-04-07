@@ -1,0 +1,2842 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Apr 6, 2025 08:01:03 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@AA</a><a class="dropdown-item" href="#">@newPersonalClient</a><a class="dropdown-item" href="#">@leads</a><a class="dropdown-item" href="#">@ui</a><a class="dropdown-item" href="#">@ZZ</a><a class="dropdown-item" href="#">@docuportDb</a><a class="dropdown-item" href="#">@smoke</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">As a data consumer, I want UI account holder name to be in DB.</p>
+            <p class="text-sm">
+              <span>8:01:03 PM</span> / <span>00:00:31:289</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">As a data consumer, I want UI account holder name to be in DB.</h5>
+<span class='badge badge-success'>04.06.2025 8:01:03 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:01:34 PM</span>
+<span class='badge badge-default'>00:00:31:289</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>verify UI user total account count matches in DB</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DocuportStepDefs.the_on_the_home_page(java.lang.String)">
+                <span>Given the "advisor" on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI user total account count matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DocuportStepDefs.the_user_navigates_to_page(java.lang.String)">
+                <span>And the user navigates to "Users" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI user total account count matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded2.png' src="../Screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DocuportStepDefs.the_user_gets_total_user_count()">
+                <span>When the user gets total user count</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI user total account count matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded3.png' src="../Screenshots/embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DocuportStepDefs.verify_user_count_information_match_in_db()">
+                <span>Then verify user count information match in DB</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI user total account count matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded4.png' src="../Screenshots/embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify user tables names</p>
+            <p class="text-sm">
+              <span>8:01:34 PM</span> / <span>00:00:01:528</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify user tables names</h5>
+<span class='badge badge-success'>04.06.2025 8:01:34 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:01:36 PM</span>
+<span class='badge badge-default'>00:00:01:528</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>verify users table columns</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DBSteps.establish_the_database_connection()">
+                <span>Given Establish the database connection</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify users table columns
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded5.png' src="../Screenshots/embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DBSteps.execute_query_to_get_all_columns()">
+                <span>When Execute query to get all columns</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify users table columns
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded6.png' src="../Screenshots/embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DBSteps.verify_the_below_columns_are_listed_in_result(java.util.List<java.lang.String>)">
+                <span>Then verify the below columns are listed in result</span>
+      <div><table class='markup-table table '><tr><td>id</td></tr><tr><td>first_name</td></tr><tr><td>last_name</td></tr><tr><td>email_address</td></tr><tr><td>phone_number</td></tr><tr><td>role_name</td></tr><tr><td>supervisor_user_id</td></tr><tr><td>advisor_user_id</td></tr><tr><td>department_id</td></tr><tr><td>department_name</td></tr><tr><td>username</td></tr><tr><td>inviter_user_id</td></tr><tr><td>is_lead_onboarding_completed</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify users table columns
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded7.png' src="../Screenshots/embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Docuport Login Logout Feature</p>
+            <p class="text-sm">
+              <span>8:01:36 PM</span> / <span>00:00:38:553</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Docuport Login Logout Feature</h5>
+<span class='badge badge-success'>04.06.2025 8:01:36 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:02:14 PM</span>
+<span class='badge badge-default'>00:00:38:553</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>Login as a client</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded8.png' src="../Screenshots/embedded8.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_client()">
+                <span>When user enters username for client</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded9.png' src="../Screenshots/embedded9.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_client()">
+                <span>And user enters password for client</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded10.png' src="../Screenshots/embedded10.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded11.png' src="../Screenshots/embedded11.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_be_able_to_see_the_home_for_client()">
+                <span>Then user should be able to see the home for client</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded12.png' src="../Screenshots/embedded12.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_successfully_logout()">
+                <span>And user should successfully logout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded13.png' src="../Screenshots/embedded13.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="41"><span class="badge log pass-bg mr-2">Pass</span>Login as a employee</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a employee
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded14.png' src="../Screenshots/embedded14.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_employee()">
+                <span>When user enters username for employee</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a employee
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded15.png' src="../Screenshots/embedded15.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_employee()">
+                <span>And user enters password for employee</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a employee
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded16.png' src="../Screenshots/embedded16.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a employee
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded17.png' src="../Screenshots/embedded17.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_be_able_to_see_the_home_for_employee()">
+                <span>Then user should be able to see the home for employee</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a employee
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded18.png' src="../Screenshots/embedded18.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_successfully_logout()">
+                <span>And user should successfully logout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a employee
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded19.png' src="../Screenshots/embedded19.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="56"><span class="badge log pass-bg mr-2">Pass</span>Login as a advisor</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a advisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded20.png' src="../Screenshots/embedded20.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_advisor()">
+                <span>When user enters username for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a advisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded21.png' src="../Screenshots/embedded21.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_advisor()">
+                <span>And user enters password for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a advisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded22.png' src="../Screenshots/embedded22.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a advisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded23.png' src="../Screenshots/embedded23.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_be_able_to_see_the_home_for_advisor()">
+                <span>Then user should be able to see the home for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a advisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded24.png' src="../Screenshots/embedded24.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_successfully_logout()">
+                <span>And user should successfully logout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a advisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded25.png' src="../Screenshots/embedded25.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="71"><span class="badge log pass-bg mr-2">Pass</span>Login as a supervisor</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a supervisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded26.png' src="../Screenshots/embedded26.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_supervisor()">
+                <span>When user enters username for supervisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a supervisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded27.png' src="../Screenshots/embedded27.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_supervisor()">
+                <span>And user enters password for supervisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a supervisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded28.png' src="../Screenshots/embedded28.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a supervisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded29.png' src="../Screenshots/embedded29.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_be_able_to_see_the_home_for_supervisor()">
+                <span>Then user should be able to see the home for supervisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a supervisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded30.png' src="../Screenshots/embedded30.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_successfully_logout()">
+                <span>And user should successfully logout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Login as a supervisor
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded31.png' src="../Screenshots/embedded31.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="86"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Advisor Cannot Create Client Without Required Fields</p>
+            <p class="text-sm">
+              <span>8:02:15 PM</span> / <span>00:01:07:498</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Advisor Cannot Create Client Without Required Fields</h5>
+<span class='badge badge-success'>04.06.2025 8:02:15 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:03:22 PM</span>
+<span class='badge badge-default'>00:01:07:498</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=86</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="87"><span class="badge log pass-bg mr-2">Pass</span>As Advisor create a new <clientType> client with empty first and last name inputs</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="88"><span class="badge log pass-bg mr-2">Pass</span>As Advisor create a new Business client with empty first and last name inputs</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded32.png' src="../Screenshots/embedded32.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters username for advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded33.png' src="../Screenshots/embedded33.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters password for advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded34.png' src="../Screenshots/embedded34.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user click login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded35.png' src="../Screenshots/embedded35.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be able to see the home for advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded36.png' src="../Screenshots/embedded36.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks Clients on left navigation Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded37.png' src="../Screenshots/embedded37.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see Clients page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded38.png' src="../Screenshots/embedded38.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks Create new client dropdown and choose "Business"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded39.png' src="../Screenshots/embedded39.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And create new client window popped up user clicks Create new user checkbox</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded40.png' src="../Screenshots/embedded40.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user fills out all required fields except first and last name for "Business"</span>
+      <div><table class='markup-table table '><tr><td>Email</td><td>l.kramer@gmail.com</td></tr><tr><td>Advisor</td><td>advisor advisor</td></tr><tr><td>Phone number</td><td>3109752607</td></tr><tr><td>Password</td><td>LolaGladiola1</td></tr><tr><td>Confirm Password</td><td>LolaGladiola1</td></tr><tr><td>Company name</td><td>Big Deals</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded41.png' src="../Screenshots/embedded41.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks save</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded42.png' src="../Screenshots/embedded42.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then an error message should be displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded43.png' src="../Screenshots/embedded43.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate that user was not created</span>
+      <div><table class='markup-table table '><tr><td>l.kramer@gmail.com</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Business client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded44.png' src="../Screenshots/embedded44.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="117"><span class="badge log pass-bg mr-2">Pass</span>As Advisor create a new Personal client with empty first and last name inputs</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded45.png' src="../Screenshots/embedded45.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters username for advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded46.png' src="../Screenshots/embedded46.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters password for advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded47.png' src="../Screenshots/embedded47.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user click login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded48.png' src="../Screenshots/embedded48.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should be able to see the home for advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded49.png' src="../Screenshots/embedded49.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks Clients on left navigation Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded50.png' src="../Screenshots/embedded50.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see Clients page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded51.png' src="../Screenshots/embedded51.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks Create new client dropdown and choose "Personal"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded52.png' src="../Screenshots/embedded52.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And create new client window popped up user clicks Create new user checkbox</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded53.png' src="../Screenshots/embedded53.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user fills out all required fields except first and last name for "Personal"</span>
+      <div><table class='markup-table table '><tr><td>Email</td><td>k.glad@gmail.com</td></tr><tr><td>Advisor</td><td>advisor advisor</td></tr><tr><td>Phone number</td><td>3109752607</td></tr><tr><td>Password</td><td>LolaGladiola1</td></tr><tr><td>Confirm Password</td><td>LolaGladiola1</td></tr><tr><td>Company name</td><td>Big Deals</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded54.png' src="../Screenshots/embedded54.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks save</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded55.png' src="../Screenshots/embedded55.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then an error message should be displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded56.png' src="../Screenshots/embedded56.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate that user was not created</span>
+      <div><table class='markup-table table '><tr><td>k.glad@gmail.com</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As Advisor create a new Personal client with empty first and last name inputs
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded57.png' src="../Screenshots/embedded57.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="146"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table.</p>
+            <p class="text-sm">
+              <span>8:03:22 PM</span> / <span>00:00:20:403</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table.</h5>
+<span class='badge badge-success'>04.06.2025 8:03:22 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:03:42 PM</span>
+<span class='badge badge-default'>00:00:20:403</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=146</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="147"><span class="badge log fail-bg mr-2">Fail</span>verify UI leads matches in DB</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI leads matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded58.png' src="../Screenshots/embedded58.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_advisor()">
+                <span>When user enters username for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI leads matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded59.png' src="../Screenshots/embedded59.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_advisor()">
+                <span>And user enters password for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI leads matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded60.png' src="../Screenshots/embedded60.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI leads matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded61.png' src="../Screenshots/embedded61.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.DocuportStepDefs.the_user_navigates_to_page(java.lang.String)">
+                <span>And the user navigates to "Leads" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI leads matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded62.png' src="../Screenshots/embedded62.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="io.docuport_g1.step_definitions.LeadsStepsDefs.the_user_gets_all_the_leads_information_based_on_and_and(java.lang.String,java.lang.String,java.lang.String)">
+                <span>When the user gets all the leads information based on "Full name" and "Email address" and "Phone number"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//tbody/tr)[1]//td[2]"}
+  (Session info: chrome=135.0.7049.41)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.6', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7e9dd231051db16e05052ad046adad12, findElement {using=xpath, value=(//tbody/tr)[1]//td[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.41, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/s2/q5rcb_3n21s...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54055}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54055/devtoo..., se:cdpVersion: 135.0.7049.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e9dd231051db16e05052ad046adad12
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at io.docuport_g1.pages.LeadsPage.getAllLeadsInformation(LeadsPage.java:42)
+	at io.docuport_g1.step_definitions.LeadsStepsDefs.the_user_gets_all_the_leads_information_based_on_and_and(LeadsStepsDefs.java:29)
+	at ✽.the user gets all the leads information based on "Full name" and "Email address" and "Phone number"(file:///Users/dianakolpakova/IdeaProjects/G1_Docuport/src/test/resources/features/db_leads_08_alina_shakir.feature:11)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>verify UI leads matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded63.png' src="../Screenshots/embedded63.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.LeadsStepsDefs.verify_leads_information_match_in_db()">
+                <span>Then verify leads information match in DB</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>io.docuport_g1.step_definitions.Hook.tearDown(io.cucumber.java.Scenario)</span>
+      <div>verify UI leads matches in DB
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded64.png' src="../Screenshots/embedded64.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="166"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Click buttons advisor</p>
+            <p class="text-sm">
+              <span>8:03:42 PM</span> / <span>00:00:15:821</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Click buttons advisor</h5>
+<span class='badge badge-success'>04.06.2025 8:03:42 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:03:58 PM</span>
+<span class='badge badge-default'>00:00:15:821</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=166</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="167"><span class="badge log pass-bg mr-2">Pass</span>Click buttons on different pages as a client</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Click buttons on different pages as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded65.png' src="../Screenshots/embedded65.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_advisor()">
+                <span>When user enters username for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Click buttons on different pages as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded66.png' src="../Screenshots/embedded66.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_advisor()">
+                <span>And user enters password for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Click buttons on different pages as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded67.png' src="../Screenshots/embedded67.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Click buttons on different pages as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded68.png' src="../Screenshots/embedded68.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_be_able_to_see_the_home_for_client()">
+                <span>Then user should be able to see the home for client</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Click buttons on different pages as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded69.png' src="../Screenshots/embedded69.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.AdvisorStepDefs.user_clicks_button_on_page(java.lang.String,java.lang.String)">
+                <span>And user clicks "Received Doc" button on "Left Navigate" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Click buttons on different pages as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded70.png' src="../Screenshots/embedded70.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.AdvisorStepDefs.user_clicks_button_on_page(java.lang.String,java.lang.String)">
+                <span>And user clicks "Search" button on "Received Doc" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Click buttons on different pages as a client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded71.png' src="../Screenshots/embedded71.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="184"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate Left Navigation items for advisor user</p>
+            <p class="text-sm">
+              <span>8:03:58 PM</span> / <span>00:02:02:006</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate Left Navigation items for advisor user</h5>
+<span class='badge badge-success'>04.06.2025 8:03:58 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:06:00 PM</span>
+<span class='badge badge-default'>00:02:02:006</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=184</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="185"><span class="badge log pass-bg mr-2">Pass</span>Validate Left nav</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded72.png' src="../Screenshots/embedded72.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_advisor()">
+                <span>When user enters username for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded73.png' src="../Screenshots/embedded73.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_advisor()">
+                <span>And user enters password for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded74.png' src="../Screenshots/embedded74.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>When user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded75.png' src="../Screenshots/embedded75.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.NavBarStepDefs.validate_left_navigation_items(java.util.List<java.lang.String>)">
+                <span>Then validate left navigation items</span>
+      <div><table class='markup-table table '><tr><td>Home</td></tr><tr><td>Received docs</td></tr><tr><td>My uploads</td></tr><tr><td>Clients</td></tr><tr><td>Invitations</td></tr><tr><td>Users</td></tr><tr><td>Leads</td></tr><tr><td>Bookkeeping</td></tr><tr><td>1099 Form</td></tr><tr><td>Reconciliations</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded76.png' src="../Screenshots/embedded76.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_successfully_logout()">
+                <span>And user should successfully logout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded77.png' src="../Screenshots/embedded77.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="200"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate Left Navigation items for client</p>
+            <p class="text-sm">
+              <span>8:06:00 PM</span> / <span>00:00:54:124</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate Left Navigation items for client</h5>
+<span class='badge badge-success'>04.06.2025 8:06:00 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:06:54 PM</span>
+<span class='badge badge-default'>00:00:54:124</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=200</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="201"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Validate Left nav</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Scenario: Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded78.png' src="../Screenshots/embedded78.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_client()">
+                <span>When user enters username for client</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Scenario: Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded79.png' src="../Screenshots/embedded79.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_client()">
+                <span>And user enters password for client</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Scenario: Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded80.png' src="../Screenshots/embedded80.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Scenario: Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded81.png' src="../Screenshots/embedded81.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.NavBarStepDefs.validate_left_navigation_items(java.util.List<java.lang.String>)">
+                <span>Then validate left navigation items</span>
+      <div><table class='markup-table table '><tr><td>Home</td></tr><tr><td>Received docs</td></tr><tr><td>My uploads</td></tr><tr><td>Invitations</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Scenario: Validate Left nav
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded82.png' src="../Screenshots/embedded82.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="214"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Docuport create new client like advisor for Personal account</p>
+            <p class="text-sm">
+              <span>8:06:54 PM</span> / <span>00:00:39:078</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Docuport create new client like advisor for Personal account</h5>
+<span class='badge badge-success'>04.06.2025 8:06:54 PM</span>
+<span class='badge badge-danger'>04.06.2025 8:07:33 PM</span>
+<span class='badge badge-default'>00:00:39:078</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=214</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="215"><span class="badge log fail-bg mr-2">Fail</span>crete a new personal client</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>crete a new personal client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded83.png' src="../Screenshots/embedded83.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_username_for_advisor()">
+                <span>When user enters username for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>crete a new personal client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded84.png' src="../Screenshots/embedded84.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_enters_password_for_advisor()">
+                <span>And user enters password for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>crete a new personal client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded85.png' src="../Screenshots/embedded85.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_click_login_button()">
+                <span>And user click login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>crete a new personal client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded86.png' src="../Screenshots/embedded86.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.docuport_g1.step_definitions.LoginStepDefs.user_should_be_able_to_see_the_home_for_advisor()">
+                <span>And user should be able to see the home for advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>crete a new personal client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded87.png' src="../Screenshots/embedded87.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.user_create_a_new_personal_client(java.util.Map<java.lang.String, java.lang.String>)">
+                <span>And user create a new personal client</span>
+      <div><table class='markup-table table '><tr><td>First name</td><td>Tom</td></tr><tr><td>Last name</td><td>Jerry</td></tr><tr><td>Email address</td><td>test1577755@test.com</td></tr><tr><td>Phone number</td><td>1234567890</td></tr><tr><td>Password</td><td>Password1</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=135.0.7049.41)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.6', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d85c114a01fd0b4407d19d15178a085, clickElement {id=f.296C198E066E501A93BC67B59FD3A038.d.2929B051A4F73E48CD37710B998773CF.e.73}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.41, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/s2/q5rcb_3n21s...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54264}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54264/devtoo..., se:cdpVersion: 135.0.7049.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (8d85c114a01fd0b4407d19d15178a085)] -> xpath: //div[@class='v-list v-select-list v-sheet theme--light theme--light']//div[2]//preceding-sibling::div]
+Session ID: 8d85c114a01fd0b4407d19d15178a085
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy41.click(Unknown Source)
+	at io.docuport_g1.step_definitions.NewClientStepDefs.user_create_a_new_personal_client(NewClientStepDefs.java:45)
+	at ✽.user create a new personal client(file:///Users/dianakolpakova/IdeaProjects/G1_Docuport/src/test/resources/features/yuliia.feature:13)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.docuport_g1.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>crete a new personal client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded88.png' src="../Screenshots/embedded88.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.validate_the_new_client_created()">
+                <span>Then validate the new client created</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.log_out_as_an_advisor()">
+                <span>And log out as an advisor</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.log_as_a_new_client(java.util.Map<java.lang.String, java.lang.String>)">
+                <span>And log as a new client</span>
+      <div><table class='markup-table table '><tr><td>email</td><td>test1577755@test.com</td></tr><tr><td>password</td><td>Password1</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.user_should_be_able_to_see_the_home_for_new_client()">
+                <span>And user should be able to see the home for new client</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.log_out_as_a_new_client()">
+                <span>And log out as a new client</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.create_db_connection()">
+                <span>And create Db connection</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="io.docuport_g1.step_definitions.NewClientStepDefs.delete_newly_created(java.lang.String)">
+                <span>Then delete newly created "client"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>io.docuport_g1.step_definitions.Hook.tearDown(io.cucumber.java.Scenario)</span>
+      <div>crete a new personal client
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded89.png' src="../Screenshots/embedded89.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:03:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='146' id='160'>When the user gets all the leads information based on "Full name" and "Email address" and "Phone number"</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table..verify UI leads matches in DB.When the user gets all the leads information based on "Full name" and "Email address" and "Phone number"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.ElementNotInteractableException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementNotInteractableException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:07:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='214' id='228'>And user create a new personal client</a>
+<div class="">
+<span class="badge badge-default">Docuport create new client like advisor for Personal account.crete a new personal client.And user create a new personal client</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">7</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@AA</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AA</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:02:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='86' id='88'>As Advisor create a new Business client with empty first and last name inputs</a>
+<div class="">
+<span class="badge badge-default">Advisor Cannot Create Client Without Required Fields.As Advisor create a new Business client with empty first and last name inputs</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:02:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='86' id='117'>As Advisor create a new Personal client with empty first and last name inputs</a>
+<div class="">
+<span class="badge badge-default">Advisor Cannot Create Client Without Required Fields.As Advisor create a new Personal client with empty first and last name inputs</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@newPersonalClient</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@newPersonalClient</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:06:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='214' id='215'>crete a new personal client</a>
+<div class="">
+<span class="badge badge-default">Docuport create new client like advisor for Personal account.crete a new personal client</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@leads</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@leads</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:03:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='146' id='147'>verify UI leads matches in DB</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table..verify UI leads matches in DB</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@ui</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ui</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>verify UI user total account count matches in DB</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want UI account holder name to be in DB..verify UI user total account count matches in DB</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:02:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='86' id='88'>As Advisor create a new Business client with empty first and last name inputs</a>
+<div class="">
+<span class="badge badge-default">Advisor Cannot Create Client Without Required Fields.As Advisor create a new Business client with empty first and last name inputs</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:02:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='86' id='117'>As Advisor create a new Personal client with empty first and last name inputs</a>
+<div class="">
+<span class="badge badge-default">Advisor Cannot Create Client Without Required Fields.As Advisor create a new Personal client with empty first and last name inputs</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:03:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='146' id='147'>verify UI leads matches in DB</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table..verify UI leads matches in DB</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@ZZ</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ZZ</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='26'>Login as a client</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout Feature.Login as a client</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@docuportDb</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportDb</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>verify UI user total account count matches in DB</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want UI account holder name to be in DB..verify UI user total account count matches in DB</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:03:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='146' id='147'>verify UI leads matches in DB</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table..verify UI leads matches in DB</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:06:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='214' id='215'>crete a new personal client</a>
+<div class="">
+<span class="badge badge-default">Docuport create new client like advisor for Personal account.crete a new personal client</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>11</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">13 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="pass" class='badge log pass-bg'>11 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>verify UI user total account count matches in DB</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want UI account holder name to be in DB..verify UI user total account count matches in DB</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='16'>verify users table columns</a>
+<div class="">
+<span class="badge badge-default">Verify user tables names.verify users table columns</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='26'>Login as a client</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout Feature.Login as a client</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='41'>Login as a employee</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout Feature.Login as a employee</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:01:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='56'>Login as a advisor</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout Feature.Login as a advisor</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:02:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='71'>Login as a supervisor</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout Feature.Login as a supervisor</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:02:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='86' id='88'>As Advisor create a new Business client with empty first and last name inputs</a>
+<div class="">
+<span class="badge badge-default">Advisor Cannot Create Client Without Required Fields.As Advisor create a new Business client with empty first and last name inputs</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:02:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='86' id='117'>As Advisor create a new Personal client with empty first and last name inputs</a>
+<div class="">
+<span class="badge badge-default">Advisor Cannot Create Client Without Required Fields.As Advisor create a new Personal client with empty first and last name inputs</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:03:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='146' id='147'>verify UI leads matches in DB</a>
+<div class="">
+<span class="badge badge-default">As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table..verify UI leads matches in DB</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:03:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='166' id='167'>Click buttons on different pages as a client</a>
+<div class="">
+<span class="badge badge-default">Click buttons advisor.Click buttons on different pages as a client</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:03:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='184' id='185'>Validate Left nav</a>
+<div class="">
+<span class="badge badge-default">Validate Left Navigation items for advisor user.Validate Left nav</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:06:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='200' id='201'>Scenario: Validate Left nav</a>
+<div class="">
+<span class="badge badge-default">Validate Left Navigation items for client.Scenario: Validate Left nav</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:06:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='214' id='215'>crete a new personal client</a>
+<div class="">
+<span class="badge badge-default">Docuport create new client like advisor for Personal account.crete a new personal client</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Apr 6, 2025 08:01:03 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Apr 6, 2025 08:07:34 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>7</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='77%'>
+<b>7</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='22%'><b>2</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='84%'><b>11</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='15%'><b>2</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='94%'><b>174</b> steps passed</small></div>
+<div>
+<small data-tooltip='1%'><b>2</b> steps failed,
+<b>8</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"As a data consumer, I want UI account holder name to be in DB.":31.289,"Verify user tables names":1.528,"Docuport Login Logout Feature":38.553,"Advisor Cannot Create Client Without Required Fields":67.498,"As a data consumer, I want to make sure the LEADS information from UI are stored in postgres DB correctly in LEADS table.":20.403,"Click buttons advisor":15.821,"Validate Left Navigation items for advisor user":122.006,"Validate Left Navigation items for client":54.124,"Docuport create new client like advisor for Personal account":39.078
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@AA</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@newPersonalClient</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@leads</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@ui</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>@ZZ</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportDb</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>33.333%</td>
+</tr>
+<tr>
+<td>@smoke</td>
+<td>11</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>84.615%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 7,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 11,
+failChild: 2,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 174,
+failGrandChild: 2,
+warningGrandChild: 0,
+skipGrandChild: 8,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
